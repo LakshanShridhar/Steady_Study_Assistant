@@ -14,8 +14,8 @@ This project is a Python-based AI assistant designed to help students with their
 
 # Installation
 - Clone the repository:
-    - git clone https://github.com/LakshanShridhar/ai-homework-assistant.git
-    - cd ai-homework-assistant
+    - git clone https://github.com/LakshanShridhar/Steady_Study_Assistant.git
+    - cd Steady_Study_Assistant
 - Install the required packages:
     - pip install openai
 - Set up your OpenAI API key: Replace "your OpenAI API key" with your actual OpenAI API key in the code.
