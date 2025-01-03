@@ -22,7 +22,7 @@ This project is a Python-based AI assistant designed to help students with their
 
 # Usage
 - Run the main script:
-    - python main.py
+    - python Steady_Study_Assistant.py
 - The AI will greet you and prompt you to ask a homework-related question. Make sure to ask a clear and specific question.
 - The AI will validate your question and guide you through solving the problem. You can ask for hints or the correct answer if you’re struggling.
 - To exit the program, type “quit” when prompted for your answer.
