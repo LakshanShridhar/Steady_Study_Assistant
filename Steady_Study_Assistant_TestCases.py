@@ -8,7 +8,7 @@ import Steady_Study_Assistant  # Import the Steady_Study_Assistant module to tes
 class TestOpenAIHelper(unittest.TestCase):
 
     # Mock the openai.ChatCompletion.create method for this test
-    @patch('openai.ChatCompletion.create')
+    @patch('openai.resources.chat.Completions.create')
     def test_openai_question_validation_valid(self, mock_create):
         # Set the mock return value
         mock_create.return_value.choices[0].message = {'content': 'yes'}
@@ -16,7 +16,7 @@ class TestOpenAIHelper(unittest.TestCase):
         self.assertEqual(Steady_Study_Assistant.openai_question_validation("What is the capital of France?"), 'yes')
 
     # Mock the openai.ChatCompletion.create method for this test
-    @patch('openai.ChatCompletion.create')
+    @patch('openai.resources.chat.Completions.create')
     def test_openai_question_validation_invalid(self, mock_create):
         # Set the mock return value
         mock_create.return_value.choices[0].message = {'content': 'no'}
@@ -24,7 +24,7 @@ class TestOpenAIHelper(unittest.TestCase):
         self.assertEqual(Steady_Study_Assistant.openai_question_validation("Help me"), 'no')
 
     # Mock the openai.ChatCompletion.create method for this test
-    @patch('openai.ChatCompletion.create')
+    @patch('openai.resources.chat.Completions.create')
     def test_get_openai_validation_response_correct(self, mock_create):
         # Set the mock return value
         mock_create.return_value.choices[0].message = {'content': 'yes'}
@@ -32,7 +32,7 @@ class TestOpenAIHelper(unittest.TestCase):
         self.assertEqual(Steady_Study_Assistant.get_openai_validation_response("2+2", "4", 0), 'yes')
 
     # Mock the openai.ChatCompletion.create method for this test
-    @patch('openai.ChatCompletion.create')
+    @patch('openai.resources.chat.Completions.create')
     def test_get_openai_validation_response_incorrect(self, mock_create):
         # Set the mock return value
         mock_create.return_value.choices[0].message = {'content': 'no'}
@@ -40,7 +40,7 @@ class TestOpenAIHelper(unittest.TestCase):
         self.assertEqual(Steady_Study_Assistant.get_openai_validation_response("2+2", "5", 1), 'no')
 
     # Mock the openai.ChatCompletion.create method for this test
-    @patch('openai.ChatCompletion.create')
+    @patch('openai.resources.chat.Completions.create')
     def test_get_openai_hint_or_answer_hint(self, mock_create):
         # Set the mock return value
         mock_create.return_value.choices[0].message = {'content': 'Try breaking it down into smaller steps.'}
@@ -48,7 +48,7 @@ class TestOpenAIHelper(unittest.TestCase):
         self.assertEqual(Steady_Study_Assistant.get_openai_hint_or_answer("2+2", provide_answer=False), 'Try breaking it down into smaller steps.')
 
     # Mock the openai.ChatCompletion.create method for this test
-    @patch('openai.ChatCompletion.create')
+    @patch('openai.resources.chat.Completions.create')
     def test_get_openai_hint_or_answer_answer(self, mock_create):
         # Set the mock return value
         mock_create.return_value.choices[0].message = {'content': 'The answer is 4.'}
@@ -68,7 +68,7 @@ class TestOpenAIHelper(unittest.TestCase):
                 greeting =  "Good afternoon!"
             # Assert that the function returns the correct greeting
             self.assertEqual(Steady_Study_Assistant.personalized_greeting(), greeting)
-            
+
 # Run the tests
 if __name__ == '__main__':
         unittest.main()
