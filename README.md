@@ -28,11 +28,11 @@ This project is a Python-based AI assistant designed to help students with their
 - To exit the program, type “quit” when prompted for your answer.
 
 # Example:
-AI: Good morning! I'm here to help you with any homework-related questions you have. Please go ahead and describe your problem or ask your question, in complete sentences.
-You: How do I solve the multiplication expression 8*5?
-AI: Great! Let's work through this together. I'll help guide you, but remember, it's important to try solving it yourself first.
-Your attempt: 40
-AI: That's correct! Well done! I knew you could do it!
+- AI: Good morning! I'm here to help you with any homework-related questions you have. Please go ahead and describe your problem or ask your question, in complete sentences.
+- You: How do I solve the multiplication expression 8*5?
+- AI: Great! Let's work through this together. I'll help guide you, but remember, it's important to try solving it yourself first.
+- Your attempt: 40
+- AI: That's correct! Well done! I knew you could do it!
 
 # Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
